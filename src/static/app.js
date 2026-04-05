@@ -498,6 +498,8 @@ document.addEventListener("DOMContentLoaded", () => {
           buttonEl.textContent = original;
           buttonEl.classList.remove("share-copy-success");
         }, 1500);
+      }).catch(() => {
+        alert("Could not copy link. Please copy the URL from your browser's address bar.");
       });
     }
   }
@@ -600,9 +602,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         <div class="share-buttons">
           <span class="share-label">Share:</span>
-          <button class="share-btn share-twitter" data-activity="${name}" title="Share on X (Twitter)">𝕏</button>
-          <button class="share-btn share-facebook" data-activity="${name}" title="Share on Facebook">f</button>
-          <button class="share-btn share-copy" data-activity="${name}" title="Copy link">🔗</button>
+          <button class="share-btn share-twitter" data-activity="${name}" title="Share on X (Twitter)" aria-label="Share ${name} on X (Twitter)">𝕏</button>
+          <button class="share-btn share-facebook" data-activity="${name}" title="Share on Facebook" aria-label="Share ${name} on Facebook">f</button>
+          <button class="share-btn share-copy" data-activity="${name}" title="Copy link" aria-label="Copy link for ${name}">🔗</button>
         </div>
       </div>
     `;
