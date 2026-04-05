@@ -612,7 +612,57 @@ footer {
   }
 }
 
-/* User controls in header */
+/* Social sharing buttons */
+.share-buttons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.share-label {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #fff;
+  transition: opacity 0.2s, transform 0.1s;
+  padding: 0;
+}
+
+.share-btn:hover {
+  opacity: 0.85;
+  transform: scale(1.1);
+}
+
+.share-twitter {
+  background-color: #000;
+}
+
+.share-facebook {
+  background-color: #1877f2;
+}
+
+.share-copy {
+  background-color: #5f6368;
+  font-size: 0.75rem;
+}
+
+.share-copy-success {
+  background-color: #2e7d32;
+}
+
 #user-controls {
   position: absolute;
   top: 10px;
